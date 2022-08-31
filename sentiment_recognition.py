@@ -27,8 +27,8 @@ while cap.isOpened():
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(frame, scaleFactor=1.1, minNeighbors=4)
     for x, y, w, h in faces:
-        color = (100, 110, 0)
-        cv.rectangle(frame, (x, y), (x+w, y+h), color)
+        color = (100, 250, 177)
+        cv.rectangle(frame, (x, y), (x+w, y+h), color, 2)
         feed_ = preprocess(gray)
         pred_ = model.predict(feed_)[0]
         label = labels[pred_.argmax()]
