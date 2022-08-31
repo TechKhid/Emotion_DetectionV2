@@ -4,8 +4,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.preprocessing import image 
 
-model = load_model(r'C:\Users\Asustem\SentimentRecog\emotion\model.h5')
-face_cascade = cv.CascadeClassifier(r"C:\Users\Asustem\SentimentRecog\haarcascade_frontalface_default.xml")
+model = load_model('emotion_det.h5')
+face_cascade = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
 cap = cv.VideoCapture(0)
 
 labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
